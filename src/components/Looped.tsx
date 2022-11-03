@@ -1,4 +1,4 @@
-import { Component, createSignal, For } from "solid-js";
+import { Component, createSignal, Index } from "solid-js";
 
 export const Looped: Component = () => {
   const [cats, setCats] = createSignal([
@@ -9,18 +9,18 @@ export const Looped: Component = () => {
 
   return (
     <ul>
-      <For each={cats()}>
+      <Index each={cats()}>
         {(cat, i) => (
           <li>
             <a
               target="_blank"
-              href={`https://www.youtube.com/watch?v=${cat.id}`}
+              href={`https://www.youtube.com/watch?v=${cat().id}`}
             >
-              {i() + 1}: {cat.name}
+              {i + 1}: {cat().name}
             </a>
           </li>
         )}
-      </For>
+      </Index>
     </ul>
   );
 };

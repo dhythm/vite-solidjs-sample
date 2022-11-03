@@ -1,6 +1,6 @@
 import { Component, createSignal, Show } from "solid-js";
 
-export const ControlFlow: Component = () => {
+export const Showable: Component = () => {
   const [loggedIn, setLoggedIn] = createSignal(false);
   const toggle = () => setLoggedIn(!loggedIn());
 
