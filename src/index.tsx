@@ -1,7 +1,7 @@
 /* @refresh reload */
 import { render } from "solid-js/web";
+import { Counter } from "./components/Counter";
 
-import { HelloWorld } from "./components/HelloWorld";
 import "./index.css";
 
-render(() => <HelloWorld />, document.getElementById("root") as HTMLElement);
+render(() => <Counter />, document.getElementById("root") as HTMLElement);
