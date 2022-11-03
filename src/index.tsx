@@ -1,7 +1,7 @@
 /* @refresh reload */
 import { render } from "solid-js/web";
-import { Selected } from "./components/Selected";
+import { Popup } from "./components/Popup";
 
 import "./index.css";
 
-render(() => <Selected />, document.getElementById("root") as HTMLElement);
+render(() => <Popup />, document.getElementById("root") as HTMLElement);
