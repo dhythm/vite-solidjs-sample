@@ -1,11 +1,10 @@
-import { Component, createEffect, createSignal } from "solid-js";
+import { Component, createSignal } from "solid-js";
 
 export const Counter: Component = () => {
   const [count, setCount] = createSignal(0);
+  const doubleCount = () => count() * 2;
 
-  createEffect(() => {
-    console.log("The count is now", count());
-  });
+  setInterval(() => setCount(count() + 1), 1000);
 
-  return <button onClick={() => setCount(count() + 1)}>Click Me</button>;
+  return <div>Count: {doubleCount()}</div>;
 };
