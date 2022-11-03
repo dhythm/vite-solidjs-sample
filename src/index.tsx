@@ -1,7 +1,7 @@
 /* @refresh reload */
 import { render } from "solid-js/web";
-import { Counter } from "./components/Counter";
+import { ControlFlow } from "./components/ControlFlow";
 
 import "./index.css";
 
-render(() => <Counter />, document.getElementById("root") as HTMLElement);
+render(() => <ControlFlow />, document.getElementById("root") as HTMLElement);
