@@ -1,7 +1,7 @@
 /* @refresh reload */
 import { render } from "solid-js/web";
-import { Switchable } from "./components/Switchable";
+import { Selected } from "./components/Selected";
 
 import "./index.css";
 
-render(() => <Switchable />, document.getElementById("root") as HTMLElement);
+render(() => <Selected />, document.getElementById("root") as HTMLElement);
