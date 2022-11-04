@@ -1,7 +1,7 @@
 /* @refresh reload */
 import { render } from "solid-js/web";
-import { Untrack } from "./components/Untrack";
+import { On } from "./components/On";
 
 import "./index.css";
 
-render(() => <Untrack />, document.getElementById("root") as HTMLElement);
+render(() => <On />, document.getElementById("root") as HTMLElement);
