@@ -1,7 +1,7 @@
 /* @refresh reload */
 import { render } from "solid-js/web";
-import { Photos } from "./components/Photos";
+import { Position } from "./components/Position";
 
 import "./index.css";
 
-render(() => <Photos />, document.getElementById("root") as HTMLElement);
+render(() => <Position />, document.getElementById("root") as HTMLElement);
