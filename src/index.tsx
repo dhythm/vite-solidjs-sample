@@ -1,7 +1,7 @@
 /* @refresh reload */
 import { render } from "solid-js/web";
-import { ReduxApp } from "./components/ImmutableStore";
+import { Counter } from "./components/WithoutContext";
 
 import "./index.css";
 
-render(() => <ReduxApp />, document.getElementById("root") as HTMLElement);
+render(() => <Counter />, document.getElementById("root") as HTMLElement);
