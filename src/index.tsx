@@ -1,7 +1,7 @@
 /* @refresh reload */
 import { render } from "solid-js/web";
-import { Popup } from "./components/Popup";
+import { ErrorHandler } from "./components/ErrorHandler";
 
 import "./index.css";
 
-render(() => <Popup />, document.getElementById("root") as HTMLElement);
+render(() => <ErrorHandler />, document.getElementById("root") as HTMLElement);
