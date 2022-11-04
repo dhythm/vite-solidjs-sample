@@ -1,7 +1,10 @@
 /* @refresh reload */
 import { render } from "solid-js/web";
-import { Resource } from "./components/Resource";
+import { SuspenseGreeting } from "./components/SuspenseGreeting";
 
 import "./index.css";
 
-render(() => <Resource />, document.getElementById("root") as HTMLElement);
+render(
+  () => <SuspenseGreeting />,
+  document.getElementById("root") as HTMLElement
+);
