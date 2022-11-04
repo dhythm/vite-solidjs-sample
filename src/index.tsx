@@ -1,7 +1,7 @@
 /* @refresh reload */
 import { render } from "solid-js/web";
-import { Position } from "./components/Position";
+import { HulkOutText } from "./components/HulkOutText";
 
 import "./index.css";
 
-render(() => <Position />, document.getElementById("root") as HTMLElement);
+render(() => <HulkOutText />, document.getElementById("root") as HTMLElement);
