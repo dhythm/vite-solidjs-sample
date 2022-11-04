@@ -1,7 +1,10 @@
 /* @refresh reload */
 import { render } from "solid-js/web";
-import { Todos } from "./components/Todos";
+import { TodosWithStore } from "./components/TodosWithStore";
 
 import "./index.css";
 
-render(() => <Todos />, document.getElementById("root") as HTMLElement);
+render(
+  () => <TodosWithStore />,
+  document.getElementById("root") as HTMLElement
+);

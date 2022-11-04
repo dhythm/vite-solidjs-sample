@@ -1,24 +1,30 @@
-import { Accessor, createSignal, For, Setter } from "solid-js";
+import { For } from "solid-js";
+import { createStore, produce } from "solid-js/store";
 
 type Todo = {
   id: number;
   text: string;
-  completed: Accessor<boolean>;
-  setCompleted: Setter<boolean>;
+  completed: boolean;
 };
 
-export const Todos = () => {
-  const [todos, setTodos] = createSignal<Todo[]>([]);
+export const TodosWithStore = () => {
+  const [todos, setTodos] = createStore<Todo[]>([]);
   let input: HTMLInputElement | undefined;
   let todoId = 0;
 
   const addTodo = (text: string) => {
-    const [completed, setCompleted] = createSignal(false);
-    setTodos([...todos(), { id: ++todoId, text, completed, setCompleted }]);
+    setTodos([...todos, { id: ++todoId, text, completed: false }]);
   };
   const toggleTodo = (id: number) => {
-    const todo = todos().find((t) => t.id === id);
-    if (todo) todo.setCompleted(!todo.completed());
+    // setTodos(
+    //   (todo) => todo.id === id,
+    //   "completed",
+    //   (completed) => !completed
+    // );
+    setTodos(
+      (todo) => todo.id === id,
+      produce((todo) => (todo.completed = !todo.completed))
+    );
   };
 
   return (
@@ -35,7 +41,7 @@ export const Todos = () => {
           Add Todo
         </button>
       </div>
-      <For each={todos()}>
+      <For each={todos}>
         {(todo) => {
           const { id, text } = todo;
           console.log(`Creating ${text}`);
@@ -43,12 +49,12 @@ export const Todos = () => {
             <div>
               <input
                 type="checkbox"
-                checked={todo.completed()}
+                checked={todo.completed}
                 onchange={[toggleTodo, id]}
               />
               <span
                 style={{
-                  "text-decoration": todo.completed() ? "line-through" : "none",
+                  "text-decoration": todo.completed ? "line-through" : "none",
                 }}
               >
                 {text}
