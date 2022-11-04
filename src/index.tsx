@@ -1,10 +1,7 @@
 /* @refresh reload */
 import { render } from "solid-js/web";
-import { ColoredListWrapper } from "./components/ColoredList";
+import { Todos } from "./components/Todos";
 
 import "./index.css";
 
-render(
-  () => <ColoredListWrapper />,
-  document.getElementById("root") as HTMLElement
-);
+render(() => <Todos />, document.getElementById("root") as HTMLElement);
