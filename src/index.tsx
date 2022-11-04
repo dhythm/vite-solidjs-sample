@@ -1,7 +1,7 @@
 /* @refresh reload */
 import { render } from "solid-js/web";
-import { Provided } from "./components/CounterProvider";
+import { ReduxApp } from "./components/ImmutableStore";
 
 import "./index.css";
 
-render(() => <Provided />, document.getElementById("root") as HTMLElement);
+render(() => <ReduxApp />, document.getElementById("root") as HTMLElement);
