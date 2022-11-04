@@ -1,10 +1,10 @@
 /* @refresh reload */
 import { render } from "solid-js/web";
-import { GreetingWrapper } from "./components/SplittedGreeting";
+import { ColoredListWrapper } from "./components/ColoredList";
 
 import "./index.css";
 
 render(
-  () => <GreetingWrapper />,
+  () => <ColoredListWrapper />,
   document.getElementById("root") as HTMLElement
 );
