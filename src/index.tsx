@@ -1,6 +1,6 @@
 /* @refresh reload */
 import { render } from "solid-js/web";
-import { GreetingWrapper } from "./components/Greeting";
+import { GreetingWrapper } from "./components/SplittedGreeting";
 
 import "./index.css";
 
