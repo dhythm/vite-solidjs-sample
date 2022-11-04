@@ -1,7 +1,10 @@
 /* @refresh reload */
 import { render } from "solid-js/web";
-import { InfoWrapper } from "./components/Info";
+import { GreetingWrapper } from "./components/Greeting";
 
 import "./index.css";
 
-render(() => <InfoWrapper />, document.getElementById("root") as HTMLElement);
+render(
+  () => <GreetingWrapper />,
+  document.getElementById("root") as HTMLElement
+);

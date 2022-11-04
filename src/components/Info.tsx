@@ -7,7 +7,7 @@ type Props = {
   website: string;
 };
 
-export const Info: Component<Props> = (props) => {
+const Info: Component<Props> = (props) => {
   return (
     <p>
       The <code>{props.name}</code> package is {props.speed} fast. Download
