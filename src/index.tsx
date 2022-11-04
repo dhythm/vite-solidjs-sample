@@ -1,7 +1,7 @@
 /* @refresh reload */
 import { render } from "solid-js/web";
-import { BatchUpdates } from "./components/BatchUpdates";
+import { Untrack } from "./components/Untrack";
 
 import "./index.css";
 
-render(() => <BatchUpdates />, document.getElementById("root") as HTMLElement);
+render(() => <Untrack />, document.getElementById("root") as HTMLElement);
